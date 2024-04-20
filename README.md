@@ -1,1 +1,1 @@
-# polyp-cancer-detection-system-using-cnn
+# Polyp-Cancer-Detection-System-Using-CNN
