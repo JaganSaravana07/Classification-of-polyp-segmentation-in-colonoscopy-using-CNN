@@ -1,0 +1,296 @@
+<!--<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>login &amp; signup form</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login_style.css') }}">
+  <script src="{{ url_for('static', filename='login_script.js') }}"></script>
+</head>
+
+
+
+  <div class="container">
+ 
+    <div class="box-1">
+        <div class="content-holder">
+            <h2>Hello!</h2>
+           
+            <button class="button-1" onclick="signup()">Sign up</button>
+            <button class="button-2" onclick="login()">Login</button>
+        </div>
+    </div>
+
+    
+ 
+    <div class="box-2">
+      <form name="f1" action="/login" method="POST" class="login" onsubmit="return loginValidation()">
+        <div class="login-form-container">
+            <h1>Login Form</h1>
+            <input type="email" placeholder="Email" id="user" name="" class="input-field" required>
+            <br><br>
+            <input type="password" placeholder="Password" id="login_password" name="login_password" class="input-field" required>
+            <br><br>
+            <input class="login-button" type="submit" id="signin" value="Login">
+        </div>
+      </form>
+
+
+<form action="/register" class="signup" method="POST" onsubmit="return signupValidation()">
+    <div class="signup-form-container">
+        <h1>Sign Up Form</h1>
+        <input type="text" id="username" name="username" placeholder="Enter Username" class="input-field" required>
+        <br><br>
+        <input type="email" placeholder="Email" class="input-field">
+        <br><br>
+        <input type="password" placeholder="Password" class="input-field">
+        <br><br>
+        <input class="signup-button" type="submit" value="Signup">
+    </div>
+  </form>
+</div>
+
+  <script>
+    function loginValidation() {
+      var username = document.getElementById("username").value;
+        return true;
+    }
+  
+  </script>
+  <script>
+    function signupValidation() {
+      var username = document.getElementById("username").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirm_password").value;
+
+      // Email validation using a simple regex
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Invalid email address");
+        return false;
+      }
+
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long");
+        return false;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>-->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login &amp; Signup Form</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login_style.css') }}">
+  <script src="{{ url_for('static', filename='login_script.js') }}"></script>
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="box-1">
+    <div class="content-holder">
+      <h2>Hello!</h2>
+      <button class="button-1" onclick="signup()">Sign up</button>
+      <button class="button-2" onclick="login()">Login</button>
+    </div>
+  </div>
+
+  
+  <div class="box-2">
+    <form action="/login" method="POST" class="login" onsubmit="return loginValidation()">
+      <div class="login-form-container">
+        <h1>Login Form</h1>
+        <input type="email" placeholder="Email" id="login_email" name="login_email" class="input-field" required>
+        <br><br>
+        <input type="password" placeholder="Password" id="login_password" name="login_password" class="input-field" required>
+        <br><br>
+        <input class="login-button" type="submit" id="signin" value="Login">
+      </div>
+    </form>
+
+    
+    <form action="/register" class="signup" method="POST" onsubmit="return signupValidation()">
+      <div class="signup-form-container">
+        <h1>Sign Up Form</h1>
+        <input type="text" id="username" name="username" placeholder="Enter Username" class="input-field" required>
+        <br><br>
+        <input type="email" id="signup_email" name="signup_email" placeholder="Email" class="input-field" required>
+        <br><br>
+        <input type="password" id="password" name="password" placeholder="Password" class="input-field" required>
+        <br><br>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" class="input-field" required>
+        <br><br>
+        <input class="signup-button" type="submit" id="register" value="Signup">
+    
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  function loginValidation() {
+    // You can add validation for the login form here if needed
+    return true;
+  }
+
+  function signupValidation() {
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("signup_email").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirm_password").value;
+
+    // Email validation using a simple regex
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Invalid email address");
+      return false;
+    }
+
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters long");
+      return false;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return false;
+    }
+    return true;
+  }
+</script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Signup Form</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login_style.css') }}">
+  <script src="{{ url_for('static', filename='login_script.js') }}"></script>
+</head>
+<body>
+
+<div class="container">
+  <!--Data or Content-->
+  <div class="box-1">
+    <div class="content-holder">
+      <h2>Hello!</h2>
+      <button class="button-1" id="signupBtn">Sign up</button>
+      <button class="button-2" id="loginBtn">Login</button>
+    </div>
+  </div>
+
+  <!--Forms-->
+  <div class="box-2">
+    <form action="/login" method="POST" class="login" id="loginForm" onsubmit="return loginValidation()">
+      <div class="login-form-container">
+        <h1>Login Form</h1>
+        <input type="email" placeholder="Email" id="user" name="usermail" class="input-field" required>
+        <br><br>
+        <input type="password" placeholder="Password" id="login_password" name="login_password" class="input-field" required>
+        <br><br>
+        <input class="login-button" type="submit" id="signin" value="Login">
+      </div>
+    </form>
+
+    <!--Create Container for Signup form-->
+    <form action="/register" class="signup" method="POST" id="signupForm" onsubmit="return signupValidation()">
+      <div class="signup-form-container">
+        <h1>Sign Up Form</h1>
+        <input type="text" id="username" name="username" placeholder="Enter Username" class="input-field" required>
+        <br><br>
+        <input type="email" id="email" name="email" placeholder="Email" class="input-field" required>
+        <br><br>
+        <input type="password" id="password" name="password" placeholder="Password" class="input-field" required>
+        <br><br>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" class="input-field" required>
+        <br><br>
+        <input class="signup-button" type="submit" id="register" value="Signup">
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+  function loginValidation() {
+    // You can add validation for the login form here if needed
+    return true;
+  }
+
+  function signupValidation() {
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("signup_email").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirm_password").value;
+
+    // Email validation using a simple regex
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Invalid email address");
+      return false;
+    }
+
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters long");
+      return false;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return false;
+    }
+    return true;
+  }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  function signup() {
+    document.querySelector(".login-form-container").style.display = "none";
+    document.querySelector(".signup-form-container").style.display = "block";
+    document.querySelector(".container").style.background = "linear-gradient(to bottom, rgb(56, 189, 149),  rgb(28, 139, 106))";
+    document.querySelector(".button-1").style.display = "none";
+    document.querySelector(".button-2").style.display = "block";
+  }
+
+  function login() {
+    document.querySelector(".signup-form-container").style.display = "none";
+    document.querySelector(".login-form-container").style.display = "block";
+    document.querySelector(".container").style.background = "linear-gradient(to bottom, rgb(6, 108, 224),  rgb(14, 48, 122))";
+    document.querySelector(".button-2").style.display = "none";
+    document.querySelector(".button-1").style.display = "block";
+  }
+
+  // Assuming you have defined the necessary elements
+  const signupBtn = document.getElementById("signupBtn");
+  const loginBtn = document.getElementById("loginBtn");
+  const loginForm = document.getElementById("loginForm");
+  const signupForm = document.getElementById("signupForm");
+
+  signupBtn.onclick = () => {
+    signup();
+    return false; // Prevent default behavior of link
+  };
+
+  loginBtn.onclick = () => {
+    login();
+    return false; // Prevent default behavior of link
+  };
+});
+</script>
+
+</body>
+</html>
+
+

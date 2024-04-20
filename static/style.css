@@ -1,0 +1,68 @@
+.text01 {
+    font-family: 'Battambang', sans-serif;
+    font-size: 22px;
+    color: rgba(247, 160, 58, 1);
+    text-align: left;
+    position: absolute;
+    top: -10px;
+    left: 40px;
+}
+
+.text02, .text03 {
+    font-family: 'Battambang', sans-serif;
+    font-size: 62px;
+    color: rgba(247, 160, 58, 1);
+    text-align: left;
+    position: absolute;
+    left: 40px;
+}
+
+.text02 {
+    bottom: 110px;
+}
+
+.text03 {
+    bottom: 50px;
+}
+
+.text04 {
+    font-family: 'Battambang', sans-serif;
+    font-size: 26px;
+    color: rgba(247, 160, 58, 1);
+    text-align: left;
+    position: absolute;
+    bottom: 55px;
+    left: 40px;
+}
+
+a {
+    font-family: 'Battambang', sans-serif;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: absolute;
+}
+a:hover{
+    color: aquamarine;
+}
+
+div.Login_page {
+    text-align: center;
+    margin-top: 25px;
+    width: 180%;
+}
+
+.first_img {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('intestine.png'); /* Replace with your base64 encoded image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+

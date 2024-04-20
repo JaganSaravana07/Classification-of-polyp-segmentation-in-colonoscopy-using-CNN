@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .back-button {
+            position: fixed;
+            top: 80px;
+            left: 10px;
+            background-color: #fff; /* Change the background color of the button as needed */
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 15px;
+
+        }
+    </style>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Battambang&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register_style.css') }}">
+  <title>Patient Register Page</title>
+</head>
+<style>
+    .bg_img {
+        position: absolute;
+        height: 100%; /* Adjust this as needed */
+        width: 100%; /* Adjust this as needed */
+    }
+
+    .bg_img img {
+        height: 100%;
+        width: 100%;
+        background-color: #3b81c6a0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        padding: 65px 0 0 0;
+        top: 0;
+        left: 0;
+    }
+</style>
+<body>
+    <div class="bg_img">
+        <img src="{{ url_for('static', filename='register_img.jpg') }}" alt="Registration Image">
+    </div>
+    <div class="header">
+        <p>Patient Entry Page</p>
+    </div>
+    <button class="back-button" id="bk" onclick="goBack()">
+        <i class="fas fa-arrow-left" id="back" >Back</i>
+    </button>
+    <div class="container">
+        <div class="title">Enter the Details</div>
+        <form action="/patientregister1" method="post" id="record-form">
+            <div class="patient_detail">
+                <div class="input-box">
+                    <span class="details">Patient ID</span>
+                    <input type="number" id="identity" placeholder="Enter Patient ID"  name="Patient_id"required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Patient Name</span>
+                    <input type="text" id="name" placeholder="Enter Patient Name" name="Patient_name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Patient Age</span>
+                    <input type="number" id="age" placeholder="Enter Patient Age" name="Patient_age" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Patient Email Address</span>
+                    <input type="email" id="email" placeholder="Enter Patient Email Address"  name="Patient_email"required>
+                </div>
+                <div class="patient-bloodgroup">
+                    <div class="input-box">
+                        <label for="blood_group" class="details">Patient Blood Group</label>
+                        <select id="blood_group" name="blood_group" required>
+                            <option value="" disabled selected>Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Patient Address</span>
+                    <input type="text" id="address" placeholder="Enter Patient Address" name="Patient_address" required>
+                </div>
+                <div class="gender-details">
+                    <div class="input-box">
+                        <label for="gender" class="details">Patient Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Select Patient Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Patient Mobile No</span>
+                    <input type="number" id="mobile" placeholder="Enter Patient Mobile No" name="Patient_mobile" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Submit">
+                <input type="hidden" id="edit-index" value="-1">
+            </div>
+        </form>
+    </div>
+<script>
+        function goBack() {
+            window.history.back();
+        }
+
+</script>   
+    <script src="{{ url_for('static', filename='patient_details_script.js') }}"></script>
+</body>
+</html>

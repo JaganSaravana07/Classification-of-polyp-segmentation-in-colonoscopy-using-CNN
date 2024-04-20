@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.header {
+    font-family: Battambang;
+    text-align: left;
+    vertical-align: top;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 12px;
+    left: 40%;
+    font-weight: bolder;
+}
+.header p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container{
+  max-width: 600px;
+  width: 105%;
+  max-height: 600px;
+  height: 580px;
+  bottom: 20px;
+  background: #ffffff;
+  font-family: Battambang;
+  color: rgb(225, 67, 67);
+  position: absolute;
+  padding: 50px 40px;
+  border-radius: 15px;
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  border: 3px solid #ffffff;
+}
+.container .title{
+  font-size: 33px;
+  font-weight: bolder;
+  text-align: center;
+  position: relative;
+  color: #030303;
+  margin-top: -15px;
+}
+.container .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px; /* Adjust this value as needed */
+  width: 20px;
+  
+}
+
+.container form .patient_detail{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ margin: 20px 0 12px 0;
+}
+
+/*#identity{
+  width: 117%;
+}
+
+#name{
+  width: 100%;
+  margin-right: 30px;
+}
+#age{
+  width: 117%;
+}
+#email{
+  width: 100%;
+  margin-right: 30px;
+}
+#address{
+  width: 100%;
+  margin-right: 30px;
+}
+#mobile{
+  width: 100%;
+  margin-right: 30px;
+}*/
+
+#bk{
+  position: absolute;
+  height: 30px;
+  width: 90px;
+  top: 12px;
+  background-color: aliceblue;
+}
+#back{
+  position: absolute;
+  top:3px;
+  right: 25px;
+  font-size: 20px;
+  font-style: arial;
+  color:black;
+}
+
+
+form .patient_detail .input-box{
+ margin-bottom: 15px;
+ width: calc(100% / 2 -20px);
+}
+.patient_detail .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.patient_detail .input-box input{
+ height: 45px;
+ width: 100%;
+ outline: none;
+ border-radius: 5px;
+ border: 1px solid #ccc;
+ padding-left: 16px;
+ font-size: 16px;
+ border-bottom-width: 2px;
+ transition: all 0.3s ease;
+}
+.patient_detail .input-box input:focus,
+.patient_detail .input-box input:valid{
+  border-color: bisque;
+}
+form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+}
+/* Blood Group Styles */
+form #blood_group,
+form #gender {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 16px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+form #blood_group:focus,
+form #blood_group:valid,
+form #gender:focus,
+form #gender:valid {
+  border-color: bisque;
+}
+
+/* Adjustments for the blood group and gender input boxes */
+form .patient_detail .input-box #blood_group{
+  width: calc(100% / 3 + 190px);
+}
+form .patient_detail .input-box #gender {
+  width: calc(100% / 3 + 183px);
+}
+
+form .button{
+  height: 45px;
+  margin: 45px 0;
+}
+form .button input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgb(159, 71, 242);
+}
+@media (max-width:584px){
+  .container{
+    max-width: 100%;
+  }
+  form .patient_detail .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .gender-details .category{
+    width: 80%;
+  }
+  .container form .patient_detail{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .patient_detail::-webkit-scrollbar{
+    width: 0;
+  }
+}
