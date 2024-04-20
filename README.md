@@ -9,10 +9,13 @@ Techniques such as transfer learning and data augmentation will be explored to o
 ![home](https://github.com/JaganSaravana07/polyp-cancer-detection-system-using-cnn/blob/main/Screenshots/project%20home%20page.png)
 
 #### Login
+![home](https://github.com/JaganSaravana07/polyp-cancer-detection-system-using-cnn/blob/main/Screenshots/project%20login%20page.png)
 
 #### Dashboard
+![home](https://github.com/JaganSaravana07/polyp-cancer-detection-system-using-cnn/blob/main/Screenshots/project%20dashboard%20page.png)
 
 #### Patient Register Page
-
+![home](https://github.com/JaganSaravana07/polyp-cancer-detection-system-using-cnn/blob/main/Screenshots/project%20patient%20details%20entry%20page.png)
 #### Result Page
+![home](https://github.com/JaganSaravana07/polyp-cancer-detection-system-using-cnn/blob/main/Screenshots/Final%20Output%20image.jpg)
 
