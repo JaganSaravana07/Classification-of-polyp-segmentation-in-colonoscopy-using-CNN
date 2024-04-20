@@ -6,6 +6,7 @@ Techniques such as transfer learning and data augmentation will be explored to o
 ### Screenshots
 
 #### Home Page
+![home](https://github.com/JaganSaravana07/polyp-cancer-detection-system-using-cnn/blob/main/Screenshots/project%20home%20page.png)
 
 #### Login
 
