@@ -1,5 +1,8 @@
 # 💫 About Me:
-Computer Science Engineering <br>Digital Marketing<br>Front-end Developer<br>Data Analyst<br>Web Designer<br> <br>
+## Jagan Saravana
+### Computer Science Engineering Graduate
+
+`Data Analyst` `Digital Marketing` `Front-end Developer` `Web Designer`
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/jagan_saravana) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](www.linkedin.com/in/jagan-saravana-n) 
